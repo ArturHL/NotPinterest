@@ -1,0 +1,51 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    align-items: center;
+}
+div:hover{
+    cursor: pointer;
+}
+svg{
+    font-size: 24px;
+}
+.arrowDown{
+    font-size: 16px;
+    stroke-width: 1.5;
+}
+.icons{
+    color: gray;
+}
+
+/* Create Button */
+.create-container{
+    display: flex;
+}
+.create-container > p{
+    margin-right: 10px;
+}
+
+/* Input */
+input{
+    width: 72vw;
+    background-color: rgba(199, 199, 199, 0.247);
+    border: none;
+    height: 50px;
+    border-radius: 50px;
+}
+.search-container{
+    position: relative;
+}
+.search-icon{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 50%;
+    height: 30%;
+    margin: auto;
+    margin-left: 10px;
+    width: 20px;
+}

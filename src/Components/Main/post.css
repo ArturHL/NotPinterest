@@ -1,0 +1,28 @@
+.post{
+    margin-bottom: 20px;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.postDefault img{
+    width: 230px;
+    height: 470px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.postMedium img{
+    width: 230px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.postSmall img{
+    width: 230px;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 20px;
+}
