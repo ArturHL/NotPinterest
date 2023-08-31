@@ -1,9 +1,101 @@
+.inactive{
+    display: none !important;
+}
+.hitbox-out{
+    background-color: rgba(255, 255, 255, 0.021);
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    position: absolute;
+    border-radius: 20px;
+}
+/* Post Menu */
+.postMenu{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.35);
+    width: 90%;
+    height: 100%;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px 10px 10px;
+}
+.postMenu section:nth-child(1){
+    color: white;
+    display: flex;
+    padding-top: 10px;
+    align-items: center;
+}
+.postMenu section:nth-child(1) p{
+    margin-right: 15px;
+}
+.postMenu section:nth-child(1) svg{
+    font-size: 14px;
+    stroke-width: 1.5;
+}
+.postMenu section:nth-child(1) button{
+    border: none;
+    background-color: rgb(223, 0, 0);
+    color: white;
+    width: 80px;
+    height: 40px;
+    border-radius: 50px;
+    margin-left: 10px;
+}
+/* .postMenu section:nth-child(1) button:hover{
+    cursor: pointer;
+    background-color: rgb(197, 0, 0);
+} */
+.postMenu section:nth-child(2){
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.postMenu section:nth-child(2) .section-link{
+    background-color: rgb(238, 238, 238);
+    padding: 10px;
+    border-radius: 50px;
+    width: 125px;
+    height: 30px;
+}
+.postMenu section:nth-child(2) .section-link svg{
+    stroke-width: 2.5;
+    font-size: 14px;
+}
+.postMenu section:nth-child(2) div{
+    display: flex;
+    align-items: center;
+}
+.postMenu section:nth-child(2) div a{
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+}
+.postMenu section:nth-child(2) .section-more svg{
+    background-color: rgb(238, 238, 238);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    padding: 4px;
+}
+.postMenu section:nth-child(2) .section-more{
+    display: flex;
+    justify-content: space-between;
+    width: 65px;
+}
+
+
+/* Post */
 .post{
     margin-bottom: 20px;
     object-fit: cover;
     display: flex;
     justify-content: center;
     align-items: start;
+    position: relative;
 }
 
 .postDefault img{

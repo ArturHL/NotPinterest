@@ -16,10 +16,8 @@ function Main() {
         else{
           var size = 'post postMedium'
         }
-        console.log(random);
-        console.log(size);
         return(<Post 
-          key={post.userOwner}
+          key={Math.random()}
           size={size}
           image={post.image} 
           date={post.date}
