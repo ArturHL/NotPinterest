@@ -7,14 +7,15 @@ import { AiFillMessage } from 'react-icons/ai';
 import { RxAvatar } from 'react-icons/rx';
 import './index.css'
 
-function NavBar() {
+function NavBar({Home, Explorar, page}) {
+
   return (
     <nav>
         <BsPinterest fill='red'/> 
-        <div>
+        <div onClick={Home} className={page === 'Homepage'? 'currentPage':''}>
             Inicio
         </div>
-        <div>
+        <div onClick={Explorar} className={page === 'Explorar'? 'currentPage':''}>
             Explorar
         </div>
         <div className='create-container'>

@@ -1,34 +1,25 @@
-import React from 'react'
-import posts from '../../data'
-import Post from './post'
-import './index.css'
+import React, { useState } from 'react'
+// Homepage
+import Homepage from './Homepage/homepage'
+// Explorar
+import Explorar from './Explorar/explorar'
+import { use } from 'express/lib/router'
 
-function Main() {
+function Main({page}) {
+
+  function validatePage(page){
+    if(page === 'Homepage'){
+      return <Homepage/>
+    }
+    if(page === 'Explorar'){
+      return <Explorar/>
+    }
+  }
+
   return (
-    <div className='main-container'>
-      {posts.map((post) => {
-        const random = Math.trunc((Math.random())*10)
-        if(random === 0){
-          var size = 'post postSmall'
-        }else if(random%2 === 0){
-          var size = 'post postDefault'
-        }
-        else{
-          var size = 'post postMedium'
-        }
-        return(<Post 
-          key={Math.random()}
-          size={size}
-          image={post.image} 
-          date={post.date}
-          userOwner={post.userOwner} 
-          comments={post.comments}
-          likes={post.likes}
-          title={post.title} 
-          category={post.category}
-          description={post.description}/>)
-        })}
-    </div>
+    <>    
+      {validatePage(page)}
+    </>
   )
 }
 
