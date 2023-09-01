@@ -6,7 +6,6 @@ import Explorar from './Explorar/explorar'
 import { use } from 'express/lib/router'
 
 function Main({page}) {
-
   function validatePage(page){
     if(page === 'Homepage'){
       return <Homepage/>

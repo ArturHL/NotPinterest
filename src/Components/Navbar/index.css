@@ -27,6 +27,7 @@ svg{
 /* Create Button */
 .create-container{
     display: flex;
+    position: relative;
 }
 .create-container > p{
     margin-right: 10px;
