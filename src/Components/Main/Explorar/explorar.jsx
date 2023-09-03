@@ -1,6 +1,8 @@
 import React from 'react'
 import './explorar.css'
 import { BsFillCheckCircleFill } from 'react-icons/bs';
+import Category from './categorys/category';
+import categories from './categoryData';
 
 function Explorar() {
   return (
@@ -14,7 +16,35 @@ function Explorar() {
             </h2>
         </div>
         <div className='categoryContainer'>
-            <div>categorys</div>
+            <>
+            <div className='displayCategories'>
+                {categories.map((category)=>{
+                    return(
+                        <Category 
+                            key={category.categoryID}
+                            img={category.img}
+                            title={category.title}
+                            description={category.description}
+                            categoryID={category.categoryID}
+                        />
+                    )
+                })}
+            </div>
+            <div className='subtitle'>Compras destacadas</div>
+            <div className='displayCategories'>
+                {categories.map((category)=>{
+                    return(
+                        <Category 
+                            key={category.categoryID}
+                            img={category.img}
+                            title={category.title}
+                            description={category.description}
+                            categoryID={category.categoryID}
+                        />
+                    )
+                })}
+            </div>
+            </>
         </div>
         <footer className='footer'>
             <BsFillCheckCircleFill />

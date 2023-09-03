@@ -20,7 +20,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 10px;
+    margin-bottom: 100px;
     gap: 20px;
 }
 .footer p:nth-child(2){
@@ -38,4 +39,21 @@
 .footer button:hover{
     background-color: rgb(223, 223, 223);
     cursor: pointer;
+}
+.subtitle{
+    font-size: 26px;
+}
+/* Categories */
+.categoryContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.displayCategories{
+    width: 100%;
+    display: flex;
+    width: 75%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 40px;
 }
