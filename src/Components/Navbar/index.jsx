@@ -11,13 +11,13 @@ import More from './More';
 
 function NavBar({Home, Explorar, page}) {
     const [typeMenuActive, setTypeMenuActive] = useState('')
-    function createMenu(){
-        if(typeMenuActive===''){
-          setTypeMenuActive('create')
-        }else{
-          setTypeMenuActive('')
+      function createMenu(){
+          if(typeMenuActive===''){
+            setTypeMenuActive('create')
+          }else{
+            setTypeMenuActive('')
+          }
         }
-      }
       function notiMenu(){
         if(typeMenuActive===''){
           setTypeMenuActive('notification')
@@ -46,6 +46,13 @@ function NavBar({Home, Explorar, page}) {
           setTypeMenuActive('')
         }
       }
+      function searchMenu(){
+        if(typeMenuActive===''){
+          setTypeMenuActive('search')
+        }else{
+          setTypeMenuActive('')
+        }
+      }
   return (
     <>
     <nav>
@@ -61,9 +68,10 @@ function NavBar({Home, Explorar, page}) {
             <BsChevronDown className='arrowDown'/>
             <DDmenu type={'create'} active={typeMenuActive}/>
         </div>
-        <div className='search-container'>
+        <div className='search-container' >
             <FaSearch className='search-icon' fill='gray'/>
-            <input type="text" placeholder='         Buscar'/>
+            <input type="text" placeholder='         Buscar' onClick={searchMenu}/>
+            <DDmenu type={'search'} active={typeMenuActive} closeSearchMenu={searchMenu}/>
         </div>
         <div className='principalMenuContainer'>
             <BsBellFill className='icons'onClick={notiMenu}/>

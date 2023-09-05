@@ -5,9 +5,10 @@ import { HiUserAdd } from 'react-icons/hi';
 import { AiOutlineCheck } from 'react-icons/ai';
 import { BiUserCircle } from 'react-icons/bi';
 import { RiShareBoxFill } from 'react-icons/ri';
+import { AiFillCloseCircle } from 'react-icons/ai';
 import './index.css'
 
-function DDmenu({type, active}) {
+function DDmenu({type, active, closeSearchMenu}) {
     if(type==='create'){
         return (
             <div className={`ddMenu ${active==='create'?'':'inactive'} ${'menuCreate'}`}>
@@ -118,6 +119,45 @@ function DDmenu({type, active}) {
                 </div>
             </div>
         )  
+    }
+    if(type==='search'){
+        return(
+            <>
+                <div className={`searchMenu-background ${active==='search'?'':'inactive'}`} onClick={closeSearchMenu}>
+
+                </div>
+                <div className={`ddMenu ${active==='search'?'':'inactive'} ${'menuSearch'}`}>
+                    <div>
+                       <input type="text" placeholder='Buscar'/> 
+                       <AiFillCloseCircle onClick={closeSearchMenu}/>
+                    </div>
+                    <section>
+                        <h4>
+                            Busquedas Recientes
+                        </h4>
+                        <div>
+                            Busquedas jaja
+                        </div>
+                    </section>
+                    <section>
+                        <h4>
+                            Ideas para ti
+                        </h4>
+                        <div>
+                            ideas jaja
+                        </div>
+                    </section>
+                    <section>
+                        <h4>
+                            Populares en Pinterest
+                        </h4>
+                        <div>
+                            populares jaja
+                        </div>
+                    </section>
+                </div>
+            </>
+        )
     }
 }
 

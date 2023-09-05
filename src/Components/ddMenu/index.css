@@ -196,3 +196,35 @@
 .menuMore .generalOptions:nth-child(2) p:hover{
     text-decoration: underline;
 }
+/* Search Menu */
+.menuSearch{
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 25px;
+    box-shadow: none;
+}
+.menuSearch input{
+    padding: 0 10px 0 20px;
+}
+.menuSearch section{
+    margin: 30px 20px 20px 20px;
+}
+.menuSearch div:nth-child(1){
+    position: relative;
+}
+.menuSearch div:nth-child(1) svg{
+    position: absolute;
+    top: 12px;
+    right: 20px;
+}
+.searchMenu-background{
+    background-color: black;
+    opacity: 0.3;
+    width: 100vw;
+    height: 92vh;
+    position: fixed;
+    z-index: 10;
+    top: 8vh;
+    left: 0;
+}
